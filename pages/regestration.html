@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness club Coliseum</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="container">
+            <img src="../img/6f1dfv5uaxgc48osw0woc0ss8ko4gs.png" alt="" class="logo">
+            <div class="information">
+                <nav>
+                    <ul>
+                        <li><a class="nav__link-item" href="../index.html">Главная</a></li>
+                        <li><a class="nav__link-item" href="about us.html">О нас</a></li>
+                        <li><a class="nav__link-item" href="price.html">Прайс лист</a></li>
+                        <li><a class="nav__link-item" href="regestration.html">Регистрация</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+            <p>+7978-999-88-77</p>
+            </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="table">
+                    <form action="index.html">
+                        <h2 class="slogan__regestrarion">Регистрация</h2>
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required
+                                placeholder="Минимум 8 символов">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Подтвердите пароль:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required
+                                placeholder="Повторите пароль">
+                        </div>
+                        <button class="button btn-reg">Зарегистрироваться</button>
+                        
+            
+                       
+                    </form>
+                </div>
+                <div class="complete">
+                    <p> Уже зарегистрированы? <a href="Vhod.html">Войти</a></p>
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer>
+        <section class="container">
+                <p class="contacts">По телефону: +7978-999-88-77</p>
+                <div class="slogan__contacts"><h1>Вы можете связаться с нами:</h1></div>
+                <p class="contacts">По адресу: г.Симферополь, ул.Туманка 37</p>
+            </section>
+    </footer>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Пароли не совпадают");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("Пароль должен содержать не менее 8 символов");
+                return;
+            }
+
+            alert("Регистрация прошла успешно!");
+        });
+    </script>
+
+</body>
+
+</html>
